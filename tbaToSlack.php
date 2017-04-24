@@ -2,9 +2,9 @@
 //include 'php/const.php';
 //echo $_POST['verification'];
     
-$json = file_get_contents('php://input');
+//$json = file_get_contents('php://input');
 //file_put_contents("raw.json", file_get_contents('php://input'));
-file_put_contents("raw.json", $json);
+file_put_contents("raw.json", file_get_contents('php://input'));
 
 //$action = json_decode($json, true);
 //file_put_contents("tbaToSlack.txt", $json);
@@ -12,7 +12,7 @@ file_put_contents("raw.json", $json);
 
 //echo var_dump(json_decode(file_get_contents("tbaToSlack.txt"))->message_data->match->alliances);
 
-$matchData = json_decode(file_get_contents('php://input'));
+/*$matchData = json_decode(file_get_contents('php://input'));
 
 if ($matchData != null) {
 	if ($matchData->message_type != "verification") {
@@ -101,5 +101,5 @@ function matchDecode($match) {
             return null;
         break;
     }
-}
+}*/
 ?>
