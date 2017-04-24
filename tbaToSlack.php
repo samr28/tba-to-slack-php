@@ -12,7 +12,7 @@ file_put_contents("raw.json", file_get_contents('php://input'));
 
 $matchData = json_decode(file_get_contents('php://input'));
     
-require '/home/ubuntu/workspace/vendor/autoload.php';
+require '/var/www/html/tba-to-slack-php/vendor/autoload.php';
 $client = new Maknz\Slack\Client('https://hooks.slack.com/services/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');
 
 $settings = [
