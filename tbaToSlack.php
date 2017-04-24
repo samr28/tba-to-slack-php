@@ -4,7 +4,7 @@
     
 $json = file_get_contents('php://input');
 //file_put_contents("raw.json", file_get_contents('php://input'));
-file_put_contents("raw.json", "Started");
+file_put_contents("raw.json", $json);
 
 //$action = json_decode($json, true);
 //file_put_contents("tbaToSlack.txt", $json);
