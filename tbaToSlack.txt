@@ -1,0 +1,1 @@
+{"message_data":{"scheduled_time":1397330280,"match_key":"2014necmp_f1m1","team_keys":["frc195","frc558","frc5122","frc177","frc230","frc4055"],"predicted_time":1397330280,"event_name":"New England FRC Region Championship","webcast":null,"event_key":"2014necmp"},"message_type":"upcoming_match"}
