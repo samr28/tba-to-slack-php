@@ -3,6 +3,7 @@ include 'php/const.php';
 //echo $_POST['verification'];
     
 $json = file_get_contents('php://input');
+file_put_contents("raw.json", file_get_contents('php://input'));
 //$action = json_decode($json, true);
 //file_put_contents("tbaToSlack.txt", $json);
 //echo var_dump(json_decode(file_get_contents("tbaToSlack.txt")));
