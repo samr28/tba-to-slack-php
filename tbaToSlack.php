@@ -1,9 +1,11 @@
 <?php
-include 'php/const.php';
+//include 'php/const.php';
 //echo $_POST['verification'];
     
 $json = file_get_contents('php://input');
-file_put_contents("raw.json", file_get_contents('php://input'));
+//file_put_contents("raw.json", file_get_contents('php://input'));
+file_put_contents("raw.json", "Started");
+
 //$action = json_decode($json, true);
 //file_put_contents("tbaToSlack.txt", $json);
 //echo var_dump(json_decode(file_get_contents("tbaToSlack.txt")));
@@ -16,9 +18,9 @@ require '/var/www/html/tba-to-slack-php/vendor/autoload.php';
 $client = new Maknz\Slack\Client('https://hooks.slack.com/services/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');
 
 $settings = [
-    'username' => $GLOBALS['TBAToSlack']['username'],
-    'channel' => $GLOBALS['TBAToSlack']['channel'],
-    'icon' => $GLOBALS['TBAToSlack']['icon'],
+    'username' => 'Announcer McAnnouncerpants',
+    'channel' => '#testing',
+    'icon' => ':netscape:',
     'link_names' => true
 ];
 
