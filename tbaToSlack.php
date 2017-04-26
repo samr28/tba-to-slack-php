@@ -21,7 +21,7 @@ if ($matchData != null) {
 
 		$settings = [
 			'username' => 'Announcer McAnnouncerpants',
-			'channel' => '#testing',
+			'channel' => '#matches',
 			'icon' => ':netscape:',
 			'link_names' => true
 		];
@@ -78,6 +78,9 @@ if ($matchData != null) {
 				])->send($title);
 		}
 	}
+}
+else {
+	file_put_contents("verification.json", file_get_contents('php://input'));
 }
 
 file_put_contents("tbaToSlack.txt",json_encode($matchData));
