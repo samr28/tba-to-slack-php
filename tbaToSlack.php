@@ -3,8 +3,7 @@
 //echo $_POST['verification'];
     
 //$json = file_get_contents('php://input');
-//file_put_contents("raw.json", file_get_contents('php://input'));
-file_put_contents("tbaToSlack.txt", "TEDT");
+file_put_contents("raw.json", file_get_contents('php://input'));
 
 //$action = json_decode($json, true);
 //file_put_contents("tbaToSlack.txt", $json);
@@ -12,7 +11,7 @@ file_put_contents("tbaToSlack.txt", "TEDT");
 
 //echo var_dump(json_decode(file_get_contents("tbaToSlack.txt"))->message_data->match->alliances);
 
-/*$matchData = json_decode(file_get_contents('php://input'));
+$matchData = json_decode(file_get_contents('php://input'));
 
 if ($matchData != null) {
 	if ($matchData->message_type != "verification") {
@@ -34,9 +33,9 @@ if ($matchData != null) {
 			$teams['all'] = array_merge($matchData->message_data->match->alliances->blue->teams, $matchData->message_data->match->alliances->red->teams);
 		}
 
-		// in_array("frc118", $teams['all'])
+		// in_array("frc1306", $teams['all'])
 
-		if (in_array("frc1306", $teams['all']) && $matchData != json_decode(file_get_contents("tbaToSlack.txt"))) {
+		if ($matchData != json_decode(file_get_contents("tbaToSlack.txt"))) {
 			$teams['red'] = str_replace('frc','',$matchData->message_data->team_keys[0] . ', ' . $matchData->message_data->team_keys[1] . ', ' . $matchData->message_data->team_keys[2]);
 			$teams['blue'] = str_replace('frc','',$matchData->message_data->team_keys[3] . ', ' . $matchData->message_data->team_keys[4] . ', ' . $matchData->message_data->team_keys[5]);
 			$client = new Maknz\Slack\Client('https://hooks.slack.com/services/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', $settings);
@@ -101,5 +100,5 @@ function matchDecode($match) {
             return null;
         break;
     }
-}*/
+}
 ?>
